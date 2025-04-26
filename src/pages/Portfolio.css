@@ -1,0 +1,36 @@
+
+#home {
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  text-align: center;
+}
+
+.home-section {
+  width: 100%;
+}
+
+.home-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.home-section button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.home-section button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
