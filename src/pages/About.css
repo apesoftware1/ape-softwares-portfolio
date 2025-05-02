@@ -214,6 +214,28 @@
   margin: 0;
 }
 
+.team-social-media button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #e63946;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(230, 57, 70, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.team-social-media button:hover {
+  background: #c1121f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+}
+
 /* Map Section */
 .map {
   margin-top: 80px;

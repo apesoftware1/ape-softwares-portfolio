@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Projects.css';
 
 function Projects() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Simulate loading time for images

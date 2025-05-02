@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faShieldAlt,
+  faFileSignature,
+  faQuestionCircle,
+  faEnvelope,
+  faPhoneAlt,
+  faMapMarkerAlt
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebookF,
+  faTwitter,
+  faLinkedinIn,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -24,16 +39,16 @@ function Footer() {
   };
 
   const quickLinks = [
-    { id: 1, name: 'Privacy Policy', icon: 'fas fa-shield-alt', url: '/privacy-policy' },
-    { id: 2, name: 'Terms of Service', icon: 'fas fa-file-signature', url: '/terms' },
-    { id: 3, name: 'FAQs', icon: 'fas fa-question-circle', url: '/faqs' }
+    { id: 1, name: 'Privacy Policy', icon: faShieldAlt, url: '/privacy-policy' },
+    { id: 2, name: 'Terms of Service', icon: faFileSignature, url: '/terms' },
+    { id: 3, name: 'FAQs', icon: faQuestionCircle, url: '/faqs' }
   ];
 
   const socialLinks = [
-    { id: 1, name: 'Facebook', icon: 'fab fa-facebook-f', url: 'https://facebook.com/apesoftwares' },
-    { id: 2, name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/apesoftwares' },
-    { id: 3, name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: 'https://linkedin.com/company/apesoftwares' },
-    { id: 4, name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/apesoftwares' }
+    { id: 1, name: 'Facebook', icon: faFacebookF, url: 'https://facebook.com/apesoftwares' },
+    { id: 2, name: 'Twitter', icon: faTwitter, url: 'https://twitter.com/apesoftwares' },
+    { id: 3, name: 'LinkedIn', icon: faLinkedinIn, url: 'https://linkedin.com/company/apesoftwares' },
+    { id: 4, name: 'GitHub', icon: faGithub, url: 'https://github.com/apesoftwares' }
   ];
 
   return (
@@ -78,15 +93,15 @@ function Footer() {
         <div className="footer-column">
           <h3>Contact Us</h3>
           <p>
-            <i className="fas fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope} />
             <a href="mailto:support@apesoftwares.com">support@apesoftwares.com</a>
           </p>
           <p>
-            <i className="fas fa-phone-alt"></i>
+            <FontAwesomeIcon icon={faPhoneAlt} />
             <a href="tel:+1234567890">+123 456 7890</a> / <a href="tel:+0799635216">079 963 5216</a>
           </p>
           <p>
-            <i className="fas fa-map-marker-alt"></i>
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
             <a href="https://maps.google.com/?q=123+Business+Rd,+Melbourne" target="_blank" rel="noopener noreferrer">
               123 Business Rd, Melbourne
             </a>
@@ -103,7 +118,7 @@ function Footer() {
                   href={link.url}
                   aria-label={link.name}
                 >
-                  <i className={link.icon}></i>
+                  <FontAwesomeIcon icon={link.icon} />
                   {link.name}
                 </a>
               </li>
@@ -123,7 +138,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 aria-label={`Follow us on ${link.name}`}
               >
-                <i className={link.icon}></i>
+                <FontAwesomeIcon icon={link.icon} />
               </a>
             ))}
           </div>

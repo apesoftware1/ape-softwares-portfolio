@@ -30,7 +30,7 @@ function About() {
       role: "Front-End Developer",
       position: "UI/UX Designer",
       image: "/assets/IMG-20250129-WA0014.jpg",
-      linkedin: "https://linkedin.com/in/kelvin-thabo-6142a6321",
+      linkedin: "www.linkedin.com/in/kelvin-thabo-6142a6321",
       github: "https://github.com/KelvinTroy"
     }
   ];
@@ -92,26 +92,24 @@ function About() {
                     <p>{member.role}</p>
                     <p>{member.position}</p>
                     <div className="team-social-media">
-                      <a 
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => {
+                          console.log('LinkedIn clicked:', member.linkedin);
+                          window.open(member.linkedin, '_blank', 'noopener,noreferrer');
+                        }}
                         aria-label={`${member.name}'s LinkedIn profile`}
                       >
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                      <a 
-                        href={member.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        <i className="fab fa-linkedin-in"></i> LinkedIn
+                      </button>
+                      <button
+                        onClick={() => {
+                          console.log('GitHub clicked:', member.github);
+                          window.open(member.github, '_blank', 'noopener,noreferrer');
+                        }}
                         aria-label={`${member.name}'s GitHub profile`}
                       >
-                        <img 
-                          src="/assets/github-icon.png" 
-                          alt="GitHub" 
-                          className="github-icon"
-                        />
-                      </a>
+                        <i className="fab fa-github"></i> GitHub
+                      </button>
                     </div>
                   </div>
                 ))}
