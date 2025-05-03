@@ -215,25 +215,70 @@
 }
 
 .team-social-media button {
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 25px;
-  background: #e63946;
-  color: white;
-  font-weight: 600;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+  color: #fff;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(230, 57, 70, 0.2);
+  transition: 
+    background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(230, 57, 70, 0.15), 0 1.5px 4px rgba(0,0,0,0.10);
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
+  gap: 10px;
+  font-size: 1.08rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  outline: none;
 }
 
-.team-social-media button:hover {
-  background: #c1121f;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+.team-social-media button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.team-social-media button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff3 0%, #e63946 100%);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.team-social-media button:hover,
+.team-social-media button:focus {
+  background: linear-gradient(135deg, #c1121f 0%, #e63946 100%);
+  color: #fff;
+  transform: translateY(-4px) scale(1.09);
+  box-shadow: 0 8px 32px rgba(230, 57, 70, 0.25), 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.team-social-media button:hover::before,
+.team-social-media button:focus::before {
+  opacity: 0.18;
+}
+
+.team-social-media button .svg-inline--fa {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2em;
+  transition: filter 0.3s;
+}
+
+.team-social-media button:hover .svg-inline--fa,
+.team-social-media button:focus .svg-inline--fa {
+  filter: drop-shadow(0 0 8px #fff6);
 }
 
 /* Map Section */

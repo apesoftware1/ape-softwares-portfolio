@@ -26,7 +26,7 @@ function Projects() {
       id: 1,
       title: "Guest House Booking",
       description: "Best booking web application around Hammanskraal Pretoria",
-      image: "/assets/IMG-20250129-WA0014.jpg",
+      image: "/assets/IMG-1704554909178-WA0015.jpg",
       github: "https://github.com/apesoftwares/guest-house-booking",
       demo: "https://guestlocations.co.za/"
     },

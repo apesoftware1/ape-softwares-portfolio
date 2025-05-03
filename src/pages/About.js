@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import './About.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function About() {
   const [loading, setLoading] = useState(true);
@@ -17,10 +19,10 @@ function About() {
   const teamMembers = [
     {
       id: 1,
-      name: "Swaryaletsang",
+      name: "Swaryaletsang A Tau",
       role: "Founder of A.S",
       position: "Back-End Developer",
-      image: "/assets/IMG-20250129-WA0014.jpg",
+      image: "/assets/aby.jpg",
       linkedin: "https://www.linkedin.com/in/oarabetse",
       github: "https://github.com/KelvinTroy"
     },
@@ -29,8 +31,8 @@ function About() {
       name: "Thabo Kelvin Mahlonoko",
       role: "Front-End Developer",
       position: "UI/UX Designer",
-      image: "/assets/IMG-20250129-WA0014.jpg",
-      linkedin: "www.linkedin.com/in/kelvin-thabo-6142a6321",
+      image: "/assets/kelvin.png",
+      linkedin: "https://www.linkedin.com/in/kelvin-thabo-6142a6321",
       github: "https://github.com/KelvinTroy"
     }
   ];
@@ -93,22 +95,26 @@ function About() {
                     <p>{member.position}</p>
                     <div className="team-social-media">
                       <button
+                        style={{ zIndex: 10 }}
                         onClick={() => {
-                          console.log('LinkedIn clicked:', member.linkedin);
-                          window.open(member.linkedin, '_blank', 'noopener,noreferrer');
+                          console.log('LinkedIn button clicked:', member.linkedin);
+                          let url = member.linkedin.startsWith('http') ? member.linkedin : `https://${member.linkedin}`;
+                          window.open(url, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label={`${member.name}'s LinkedIn profile`}
                       >
-                        <i className="fab fa-linkedin-in"></i> LinkedIn
+                        <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
                       </button>
                       <button
+                        style={{ zIndex: 10 }}
                         onClick={() => {
-                          console.log('GitHub clicked:', member.github);
-                          window.open(member.github, '_blank', 'noopener,noreferrer');
+                          console.log('GitHub button clicked:', member.github);
+                          let url = member.github.startsWith('http') ? member.github : `https://${member.github}`;
+                          window.open(url, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label={`${member.name}'s GitHub profile`}
                       >
-                        <i className="fab fa-github"></i> GitHub
+                        <FontAwesomeIcon icon={faGithub} /> GitHub
                       </button>
                     </div>
                   </div>

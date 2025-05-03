@@ -161,7 +161,7 @@
 .footer-column ul li a {
   color: #ccc;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,46 +179,89 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(230, 57, 70, 0.1);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
+  background: linear-gradient(90deg, #e63946 0%, #c1121f 100%);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  border-radius: 5px;
 }
 
-.footer-column ul li a:hover {
-  color: #e63946;
-  transform: translateX(5px);
+.footer-column ul li a:hover,
+.footer-column ul li a:focus {
+  color: #fff;
+  background: none;
+  transform: translateX(8px) scale(1.07);
+  box-shadow: 0 4px 16px rgba(230, 57, 70, 0.13);
 }
 
-.footer-column ul li a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
+.footer-column ul li a:hover::before,
+.footer-column ul li a:focus::before {
+  opacity: 0.18;
+}
+
+.footer-column ul li a .svg-inline--fa {
+  position: relative;
+  z-index: 2;
+  transition: filter 0.3s, color 0.3s;
+}
+
+.footer-column ul li a:hover .svg-inline--fa,
+.footer-column ul li a:focus .svg-inline--fa {
+  filter: drop-shadow(0 0 6px #fff7);
+  color: #fff;
 }
 
 .footer-column p a {
   color: #ccc;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.footer-column p a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #e63946 0%, #c1121f 100%);
+  opacity: 0;
+  border-radius: 4px;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.footer-column p a:hover,
+.footer-column p a:focus {
+  color: #fff;
+  background: none;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.10);
+}
+
+.footer-column p a:hover::before,
+.footer-column p a:focus::before {
+  opacity: 0.18;
 }
 
 .footer-column p a::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
+  bottom: 2px;
+  left: 10%;
+  width: 80%;
   height: 2px;
   background: #e63946;
-  transition: width 0.3s ease;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-column p a:hover {
-  color: #e63946;
-}
-
-.footer-column p a:hover::after {
-  width: 100%;
+.footer-column p a:hover::after,
+.footer-column p a:focus::after {
+  opacity: 1;
 }
 
 .social-links {
@@ -231,16 +274,17 @@
 .social-links a {
   color: #fff;
   font-size: 1.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 45px;
   height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.13);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .social-links a::before {
@@ -250,24 +294,36 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #e63946, #c1121f);
+  background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
+  border-radius: 50%;
 }
 
-.social-links a i {
+.social-links a:hover,
+.social-links a:focus {
+  color: #fff;
+  transform: translateY(-8px) scale(1.18) rotate(-6deg);
+  box-shadow: 0 12px 32px rgba(230, 57, 70, 0.25), 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.social-links a:hover::before,
+.social-links a:focus::before {
+  opacity: 0.22;
+}
+
+.social-links a .svg-inline--fa {
   position: relative;
   z-index: 2;
+  font-size: 1.2em;
+  transition: filter 0.3s, color 0.3s;
 }
 
-.social-links a:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
-}
-
-.social-links a:hover::before {
-  opacity: 1;
+.social-links a:hover .svg-inline--fa,
+.social-links a:focus .svg-inline--fa {
+  filter: drop-shadow(0 0 10px #fff7);
+  color: #fff;
 }
 
 .footer-bottom {
