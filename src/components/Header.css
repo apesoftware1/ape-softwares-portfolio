@@ -4,7 +4,10 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   justify-content: space-between;
@@ -65,7 +68,8 @@ nav {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  margin-left: 16px;
+  margin-left: auto;
+  order: 2;
 }
 
 .hamburger-menu span {
@@ -111,5 +115,10 @@ nav {
   }
   .hamburger-menu {
     display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+  .logo-container {
+    order: 1;
   }
 }

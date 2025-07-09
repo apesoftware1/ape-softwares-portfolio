@@ -23,9 +23,14 @@ nav {
   .hamburger-menu {
     display: flex;
     z-index: 1001;
+    order: 2;
+    margin-left: auto;
+  }
+  .logo-container {
+    order: 1;
   }
   nav {
-    position: fixed;
+    position: absolute;
     top: 70px;
     right: 0;
     width: 200px;
