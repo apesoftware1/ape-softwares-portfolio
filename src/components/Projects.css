@@ -138,6 +138,11 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* scaling effect on click/touch */
+.project:active {
+  transform: scale(1.03); 
+}
+
 .project:hover img {
   transform: scale(1.05);
 }

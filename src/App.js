@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import Footer from './components/Footer'; 
+import Pricing from './components/Pricing';
 import './styles/global.css';
 import './styles/mediaQuery.css';
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
 
         <Footer />

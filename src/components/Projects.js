@@ -26,17 +26,17 @@ function Projects() {
       id: 1,
       title: "Guest House Booking",
       description: "Best booking web application around Hammanskraal Pretoria",
-      image: "/assets/IMG-1704554909178-WA0015.jpg",
+      image: "/assets/DSC_0109_ffaae47a73.jpg",
       github: "https://github.com/apesoftwares/guest-house-booking",
       demo: "https://guestlocations.co.za/"
     },
     {
       id: 2,
-      title: "Smart Grocery List",
-      description: "A task manager to help you organize and prioritize efficiently.",
-      image: "/assets/IMG-20250129-WA0014.jpg",
-      github: "https://github.com/apesoftwares/smart-grocery-list",
-      demo: "https://smartgrocerylist.apesoftwares.com"
+      title: "TombstoneFinder",
+      description: "A platform to help you easily find, compare, and connect with trusted tombstone manufacturers and suppliers across South Africa.",
+      image: "/assets/2560(w)x400px(h)_Banner_OldYoungCouple.jpg",
+      github: "https://github.com/apesoftwares/tombstone-finder", // keep this or update if you have a new repo
+      demo: "https://memorial-r2lc.vercel.app/"
     },
     {
       id: 3,
@@ -50,15 +50,7 @@ function Projects() {
 
   return (
     <div id="projects">
-      {/* Logo in the top-left corner */}
-      <div className="logo-container">
-        <img 
-          src="/assets/IMG-20250129-WA0014.png" 
-          alt="Company Logo" 
-          className="logo"
-          loading="lazy"
-        />
-      </div>
+
 
       <h2>Browse Our Recent-<span>Projects</span></h2>
       <div className="project-container">

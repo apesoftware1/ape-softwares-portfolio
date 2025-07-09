@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Footer.css';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShieldAlt,
@@ -15,6 +15,7 @@ import {
   faLinkedinIn,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
+import './Footer.css';
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -24,10 +25,22 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ email: '', message: '' });
+
+    emailjs.send(
+      'YOUR_SERVICE_ID',      // <-- Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID',     // <-- Replace with your EmailJS template ID
+      {
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'YOUR_PUBLIC_KEY'       // <-- Replace with your EmailJS public key
+    )
+    .then((result) => {
+      alert('Message sent! We will get back to you soon.');
+      setFormData({ email: '', message: '' });
+    }, (error) => {
+      alert('Failed to send message. Please try again later.');
+    });
   };
 
   const handleChange = (e) => {
@@ -57,31 +70,27 @@ function Footer() {
       <div className="contact-section">
         <h2>Connect with Us</h2>
         <form onSubmit={handleSubmit}>
-          <input 
-            className="input-field" 
-            type="email" 
+          <input
+            className="input-field"
+            type="email"
             name="email"
+            placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Your Email" 
-            required 
+            required
             aria-label="Your email address"
           />
-          <textarea 
-            className="input-field" 
+          <textarea
+            className="input-field"
             name="message"
+            placeholder="Your Message"
+            rows="5"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Your Message" 
-            rows="5" 
             required
             aria-label="Your message"
           ></textarea>
-          <button 
-            className="btn-primary" 
-            type="submit"
-            aria-label="Submit your message"
-          >
+          <button className="btn-primary" type="submit" aria-label="Submit your message">
             Stay Connected
           </button>
         </form>
@@ -98,12 +107,12 @@ function Footer() {
           </p>
           <p>
             <FontAwesomeIcon icon={faPhoneAlt} />
-            <a href="tel:+1234567890">+123 456 7890</a> / <a href="tel:+0799635216">079 963 5216</a>
+            <a href="tel:+27 69 152 8489">+27 69 152 8489</a> / <a href="tel:+0799635216">079 963 5216</a>
           </p>
           <p>
             <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <a href="https://maps.google.com/?q=123+Business+Rd,+Melbourne" target="_blank" rel="noopener noreferrer">
-              123 Business Rd, Melbourne
+            <a href="https://maps.google.com/?q=0943+Marokolong+0434" target="_blank" rel="noopener noreferrer">
+              0943 Marokolong 0434
             </a>
           </p>
         </div>

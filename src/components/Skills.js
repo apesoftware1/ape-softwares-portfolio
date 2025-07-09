@@ -3,16 +3,27 @@ import './Skills.css';
 
 function Skills() {
   const skills = [
-    { id: 1, name: 'React' },
-    { id: 2, name: 'React-Native' },
-    { id: 3, name: 'HTML' },
-    { id: 4, name: 'CSS' },
-    { id: 5, name: 'JavaScript' },
-    { id: 6, name: 'Python' },
-    { id: 7, name: 'Postgres' },
-    { id: 8, name: 'MySQL' },
-    { id: 9, name: 'GraphQL' },
-    { id: 10, name: 'Django' }
+    // Frontend
+    { id: 1, name: 'HTML' },
+    { id: 2, name: 'CSS' },
+    { id: 3, name: 'JavaScript' },
+    { id: 4, name: 'React' },
+    { id: 5, name: 'React-Native' },
+    { id: 6, name: 'Tailwind CSS' },
+    { id: 7, name: 'Next.js' },
+    // Backend
+    { id: 8, name: 'Node.js' },
+    { id: 9, name: 'Express' },
+    { id: 10, name: 'Python' },
+    { id: 11, name: 'Django' },
+    // Databases
+    { id: 12, name: 'Postgres' },
+    { id: 13, name: 'MySQL' },
+    { id: 14, name: 'MongoDB' },
+    { id: 15, name: 'Firebase' },
+    // API/Other
+    { id: 16, name: 'GraphQL' },
+    { id: 17, name: 'GitHub' },
   ];
 
   return (
