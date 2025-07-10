@@ -19,12 +19,12 @@ function About() {
   const teamMembers = [
     {
       id: 1,
-      name: "Swaryaletsang A Tau",
+      name: "Oarabetse A Tau",
       role: "Founder of A.S",
       position: "Back-End Developer",
       image: "/assets/aby.jpg",
       linkedin: "https://www.linkedin.com/in/oarabetse",
-      github: "https://github.com/KelvinTroy"
+      github: "https://github.com/Swaryaletsang/"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function About() {
       position: "UI/UX Designer",
       image: "/assets/kelvin.png",
       linkedin: "https://www.linkedin.com/in/kelvin-thabo-6142a6321",
-      github: "https://github.com/KelvinTroy"
+      github: "https://github.com/KelvinTroy/"
     }
   ];
 

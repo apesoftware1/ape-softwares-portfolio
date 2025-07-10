@@ -58,10 +58,10 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { id: 1, name: 'Facebook', icon: faFacebookF, url: 'https://facebook.com/apesoftwares' },
+    { id: 1, name: 'Facebook', icon: faFacebookF, url: 'https://web.facebook.com/profile.php?id=61578148533060' },
     { id: 2, name: 'Twitter', icon: faTwitter, url: 'https://twitter.com/apesoftwares' },
     { id: 3, name: 'LinkedIn', icon: faLinkedinIn, url: 'https://linkedin.com/company/apesoftwares' },
-    { id: 4, name: 'GitHub', icon: faGithub, url: 'https://github.com/apesoftwares' }
+    { id: 4, name: 'GitHub', icon: faGithub, url: 'https://github.com/apesoftware1/' }
   ];
 
   return (

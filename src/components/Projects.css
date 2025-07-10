@@ -177,12 +177,15 @@
   #projects h2 {
     font-size: 2rem;
   }
-  
   .project-links {
     flex-direction: column;
   }
-  
   .project-links button {
     width: 100%;
+  }
+  .project {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
